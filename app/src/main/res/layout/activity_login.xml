@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <EditText
+        android:id="@+id/country"
+        android:layout_width="@dimen/country_code_width"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/country_margin_end"
+        android:gravity="center"
+        android:hint="@string/country_code_hint"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_number"
+        app:layout_constraintEnd_toStartOf="@+id/phone_number"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="@+id/phone_number"
+        android:contentDescription="@string/insert_country_code"/>
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="@dimen/phone_number_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/phone_number_margin"
+        android:layout_marginEnd="@dimen/phone_number_margin"
+        android:layout_marginBottom="@dimen/phone_number_margin"
+        android:gravity="center"
+        android:hint="@string/phone_number_hint"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="0.26"
+        android:contentDescription="@string/insert_phone_number"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/phone_number_login_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/send_btn_margin_start_left"
+        android:layout_marginLeft="@dimen/send_btn_margin_start_left"
+        android:layout_marginTop="@dimen/send_tbn_margin_top"
+        android:layout_marginEnd="@dimen/send_btn_margin_end_right"
+        android:layout_marginRight="@dimen/send_btn_margin_end_right"
+        android:background="@drawable/button_background"
+        android:text="@string/send_number"
+        android:textAllCaps="false"
+        android:textColor="@color/buttonTextColor"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number"
+        android:contentDescription="@string/send_phone_number_content_description"/>
+
+    <ImageButton
+        android:id="@+id/exit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_button"
+        android:onClick="onExit"
+        android:padding="@dimen/exit_btn_padding"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:srcCompat="@drawable/ic_close"
+        android:contentDescription="@string/exit_app_content_description" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <TextView
+        android:id="@+id/tv_verification_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tv_verif_fail_margin"
+        android:layout_marginTop="@dimen/tv_verif_fail_margin"
+        android:layout_marginEnd="@dimen/tv_verif_fail_margin"
+        android:layout_marginBottom="@dimen/tv_verif_fail_margin"
+        android:gravity="center"
+        android:text="@string/please_send_code_again"
+        android:textSize="@dimen/tv_verif_fail_font_size"
+        app:layout_constraintBottom_toTopOf="@+id/tvPhone"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/tv_country_margin_bottom"
+        android:text="@string/country_code"
+        app:layout_constraintBottom_toTopOf="@+id/country"
+        app:layout_constraintStart_toStartOf="@+id/country"
+        tools:text="@string/country_code" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/tv_phone_margin_bottom"
+        android:text="@string/phone_number"
+        app:layout_constraintBottom_toTopOf="@+id/phone_number"
+        app:layout_constraintStart_toStartOf="@+id/phone_number"
+        tools:text="@string/phone_number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

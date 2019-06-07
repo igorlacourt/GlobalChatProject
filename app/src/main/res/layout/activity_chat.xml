@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ChatActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/conversation_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/MyToolBarTheme"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/MyToolBarPopupTheme">
+
+            <include
+                android:id="@+id/include_conversation_toolbar"
+                layout="@layout/conversation_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/conversation_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/include_send_message"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <include
+        android:id="@+id/include_send_message"
+        layout="@layout/send_message_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/include_chat_no_connection"
+        layout="@layout/no_connection_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/chat_no_connection_include_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout" />
+
+    <ProgressBar
+        android:id="@+id/loading_messages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/chat_progress_bar_margin_top"
+        android:layout_marginBottom="@dimen/chat_progress_bar_margin_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/include_send_message"
+        app:layout_constraintEnd_toStartOf="@+id/loading_warning"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/include_chat_no_connection"
+        app:layout_constraintTop_toTopOf="@+id/conversation_recyclerview" />
+
+    <TextView
+        android:id="@+id/loading_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/loading_warning_margin_start_left"
+        android:layout_marginLeft="@dimen/loading_warning_margin_start_left"
+        android:layout_marginTop="@dimen/loading_warning_margin_top"
+        android:layout_marginBottom="@dimen/loading_warning_margin_bottom"
+        android:text="@string/loading_warning"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/include_send_message"
+        app:layout_constraintEnd_toStartOf="@+id/include_chat_no_connection"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/loading_messages"
+        app:layout_constraintTop_toTopOf="@+id/conversation_recyclerview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

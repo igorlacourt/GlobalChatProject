@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="PERMISSIONS_REQUEST_READ_CONTACTS">100</integer>
+    <integer name="VERIFICATION_RESULT">1</integer>
+    <integer name="PICTURE_RESULT">2</integer>
+    <integer name="CHOOSE_CONTACT_RESULT">3</integer>
+    <integer name="CHAT_RESULT">4</integer>
+</resources>

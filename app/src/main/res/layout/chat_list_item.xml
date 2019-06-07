@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/chat_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    android:background="?attr/selectableItemBackground"
+    tool:layout_editor_absoluteY="25dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chat_list_profile_picture"
+        android:layout_width="@dimen/chat_list_pic_width"
+        android:layout_height="@dimen/chat_list_pic_width"
+        android:layout_margin="@dimen/chat_list_pic_margin"
+        android:src="@drawable/ic_person"
+        app:srcCompat="@drawable/ic_person"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/picture_of_the_chat"/>
+
+    <TextView
+        android:id="@+id/chat_list_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/chat_list_name_height"
+        android:layout_margin="@dimen/chat_list_name_margin"
+        android:textStyle="bold"
+        android:textSize="@dimen/chat_list_name_font_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/chat_list_profile_picture"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002"
+        tool:text="User Bolado" />
+
+    <TextView
+        android:id="@+id/user_list_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/user_list_phone_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toEndOf="@+id/chat_list_profile_picture"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        tool:text="+55 27 99999-9999" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginHorizontal="@dimen/chat_item_bottom_line_margin"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

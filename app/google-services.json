@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "593601995714",
+    "firebase_url": "https://global-chat-project.firebaseio.com",
+    "project_id": "global-chat-project",
+    "storage_bucket": "global-chat-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593601995714:android:7778ba43fe014083",
+        "android_client_info": {
+          "package_name": "app.lacourt.globalchatproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593601995714-fjn3k61bd50p2njmj5ec836p58cikuri.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.lacourt.globalchatproject",
+            "certificate_hash": "f6adb193f366d9f9c2fbf12a5c72ef111de70ac9"
+          }
+        },
+        {
+          "client_id": "593601995714-ld2308ppjf2nfkvopac7s1vfp7eb6fbm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFYHiZMK0Yl__mR9vzpJI2s15MFNRyYH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593601995714-ld2308ppjf2nfkvopac7s1vfp7eb6fbm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

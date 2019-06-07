@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#307951</color>
+    <color name="colorPrimary">#579d5b</color>
+    <color name="colorAccent">#42b9f4</color>
+    <color name="separationLine">#999999</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="grey">#c2c2c2</color>
+    <color name="conversationBackground">#fff7e3</color>
+    <color name="softMustard">#fffbe8</color>
+    <color name="mustard">#f4eabc</color>
+    <color name="optionsMenuBackground">#ffffff</color>
+    <color name="white">#fff</color>
+    <color name="optionsMenuText">#161616</color>
+    <color name="buttonTextColor">#fff</color>
+    <color name="messageSent">#fff</color>
+    <color name="receivedMessage">#fdfdfd</color>
+    <color name="sentMessage">#d9d9d9</color>
+    <color name="widgetText">#fefefe</color>
+    <color name="conversation_user_name_text_color">#fff</color>
+    <color name="received_msg_text_color">#222</color>
+    <color name="sent_msg_font_color">#222</color>
+</resources>
